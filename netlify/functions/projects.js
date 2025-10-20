@@ -1,11 +1,10 @@
 const { createClient } = require('@supabase/supabase-js');
 
-const supabase = createClient(
-  process.env.SUPABASE_URL,
-  process.env.SUPABASE_ANON_KEY
-);
-
 exports.handler = async (event, context) => {
+  const supabase = createClient(
+    process.env.SUPABASE_URL,
+    process.env.SUPABASE_ANON_KEY
+  );
   const headers = {
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Headers': 'Content-Type',
