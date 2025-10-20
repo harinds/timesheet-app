@@ -6,10 +6,25 @@
   # Netlify Functions directory
   functions = "netlify/functions"
 
-# Redirect all API requests to Netlify Functions
+# Redirect API requests to Netlify Functions
 [[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/:splat"
+  from = "/api/entries/*"
+  to = "/.netlify/functions/entries"
+  status = 200
+
+[[redirects]]
+  from = "/api/entries"
+  to = "/.netlify/functions/entries"
+  status = 200
+
+[[redirects]]
+  from = "/api/projects"
+  to = "/.netlify/functions/projects"
+  status = 200
+
+[[redirects]]
+  from = "/api/summary"
+  to = "/.netlify/functions/summary"
   status = 200
 
 # SPA fallback - redirect all other requests to index.html
