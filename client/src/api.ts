@@ -1,5 +1,5 @@
 import axios from 'axios';
-import type { TimeEntry, Project, TimeEntrySummary, CreateTimeEntryDTO, UpdateTimeEntryDTO } from './types';
+import type { TimeEntry, Project, TimeEntrySummary, CreateTimeEntryDTO } from './types';
 
 const API_BASE_URL = '/api';
 
