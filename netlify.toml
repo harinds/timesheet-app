@@ -1,0 +1,23 @@
+[build]
+  # Build command for the React frontend
+  command = "cd client && npm install && npm run build"
+  # Directory to publish (React build output)
+  publish = "client/dist"
+  # Netlify Functions directory
+  functions = "netlify/functions"
+
+# Redirect all API requests to Netlify Functions
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+# SPA fallback - redirect all other requests to index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Environment variables (you'll set these in Netlify UI)
+# SUPABASE_URL
+# SUPABASE_ANON_KEY

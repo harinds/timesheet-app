@@ -1,0 +1,8 @@
+ID,Date,Project Name,Task Description,Start Time,End Time,Duration (minutes),Duration (hours),Created At
+7,2025-10-18,"database setup","workout how to access the data  base",18:00,19:00,60,1.00,2025-10-19 09:02:20
+5,2025-10-17,"testing the app code","subscribe to claude code",10:00,13:00,180,3.00,2025-10-19 08:01:49
+6,2025-10-17,"testing the app code","load code into the app",01:00,16:00,900,15.00,2025-10-19 08:02:41
+3,2025-10-16,"creating an app","learning about the app",13:00,15:00,120,2.00,2025-10-19 07:59:32
+4,2025-10-16,"creating an app","doing practice exercises",10:00,13:00,180,3.00,2025-10-19 08:00:17
+2,2025-10-15,"creating an app","deciding on the stack",13:00,16:30,210,3.50,2025-10-19 07:58:43
+1,2025-10-15,"creating an app","working out the software stack",10:00,15:00,300,5.00,2025-10-19 07:57:44

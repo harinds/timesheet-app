@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timesheet App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Timesheet App</h1>
+      <p class="subtitle">Track your work hours and manage timesheets</p>
+    </header>
+
+    <div class="main-content">
+      <!-- Entry Form -->
+      <section class="card">
+        <h2>Add Time Entry</h2>
+        <form id="entryForm">
+          <div class="form-group">
+            <label for="project">Project Name *</label>
+            <input type="text" id="project" name="project" list="projectList" required>
+            <datalist id="projectList"></datalist>
+          </div>
+
+          <div class="form-group">
+            <label for="task">Task Description</label>
+            <input type="text" id="task" name="task">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="date">Date *</label>
+              <input type="date" id="date" name="date" required>
+            </div>
+
+            <div class="form-group">
+              <label for="startTime">Start Time *</label>
+              <input type="time" id="startTime" name="startTime" required>
+            </div>
+
+            <div class="form-group">
+              <label for="endTime">End Time</label>
+              <input type="time" id="endTime" name="endTime">
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary" id="submitBtn">Add Entry</button>
+            <button type="button" class="btn btn-secondary" id="cancelBtn" style="display: none;">Cancel</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Filters and Summary -->
+      <section class="card">
+        <h2>Timesheet Summary</h2>
+        <div class="filters">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="filterStartDate">Start Date</label>
+              <input type="date" id="filterStartDate">
+            </div>
+            <div class="form-group">
+              <label for="filterEndDate">End Date</label>
+              <input type="date" id="filterEndDate">
+            </div>
+            <div class="form-group">
+              <button class="btn btn-primary" id="loadSummaryBtn">Load Summary</button>
+            </div>
+          </div>
+        </div>
+        <div id="summaryContainer"></div>
+      </section>
+
+      <!-- Time Entries List -->
+      <section class="card">
+        <h2>Time Entries</h2>
+        <div class="table-actions">
+          <button class="btn btn-primary" id="loadEntriesBtn">Refresh Entries</button>
+        </div>
+        <div class="table-container">
+          <table id="entriesTable">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Project</th>
+                <th>Task</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Duration</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="entriesTableBody">
+              <tr>
+                <td colspan="7" class="no-data">No entries found. Add your first time entry above!</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

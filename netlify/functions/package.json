@@ -1,0 +1,8 @@
+{
+  "name": "timesheet-functions",
+  "version": "1.0.0",
+  "description": "Netlify serverless functions for timesheet app",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0"
+  }
+}
